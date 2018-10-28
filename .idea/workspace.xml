@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="777800d2-3ad3-4d8e-bd32-1ca658d49842" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/a.txt" afterDir="false" />
@@ -9,11 +10,15 @@
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+=======
+    <list default="true" id="aa9e2e8e-c596-4a82-9abb-2d1ef271a668" name="Default Changelist" comment="" />
+>>>>>>> test2
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="-452142175">
       <usages-collector id="statistics.lifecycle.project">
@@ -34,6 +39,8 @@
       </usages-collector>
     </session>
   </component>
+=======
+>>>>>>> test2
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
@@ -104,12 +111,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540732461227</updated>
+<<<<<<< HEAD
       <workItem from="1540732462461" duration="902000" />
+=======
+      <workItem from="1540732462461" duration="954000" />
+>>>>>>> test2
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="902000" />
+=======
+    <option name="totallyTimeSpent" value="954000" />
+>>>>>>> test2
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="108" width="1152" height="612" extended-state="0" />
