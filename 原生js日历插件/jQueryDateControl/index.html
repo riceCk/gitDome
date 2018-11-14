@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日历</title>
+	</head>
+	<body>
+		<style>
+			body{margin: 0;padding: 0;}
+			#dateOuter {
+				/*display: none;*/
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 454px;
+				margin-top:10px;
+				border: 1px solid #F7F7F7;
+				border-radius: 5px;
+				background-color: #F7F7F7;
+				color: #4eccc4;
+				padding-bottom: 20px;
+			}
+			.everyWeekDay .weekday,
+			.everyDay .days {
+				/*解决span不支持width属性*/
+				display: -moz-inline-box;
+				display: inline-block;
+				margin: 5px 0 0 20px;
+				text-align: center;
+				line-height: 44.2px;
+				width: 40px;
+				border: 1px solid #F7F7F7;
+				cursor: pointer;
+			}
+			.marginTop{
+				margin-top: 5px;
+			}
+			.selectStyle{
+				padding-left: 10px;
+				border: none;
+				border-radius: 3px;
+				outline: none;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				margin: 0 10px 0 10px;
+				width: 60px;
+				border-color: #0FB9EF;
+				color: #0FB9EF;
+			}
+			/*特殊节点样式*/
+			.special {
+				position: relative;
+				border-radius: 50%;
+				background-color:#eeaCA9;
+				color:#FFFFFF;
+				cursor:pointer;
+			}
+			.special--text {
+				background-color: #fff;
+				opacity: 0.8;
+				position: absolute;
+				display: none;
+				width: 100px;
+				height: 100px;
+				top: 35px;
+				left: 30px;
+				color: #000;
+				z-index: 999;
+			}
+			/*当前日期的样式*/
+			.now {
+				background-color:#4eccc4;
+				color:#FFFFFF;
+				cursor:pointer;
+			}
+		</style>
+		<div id="dateOuter"></div>
+		<script type="text/javascript" src="js/dateJs.fei.js" ></script>
+	</body>
+</html>
