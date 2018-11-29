@@ -9,42 +9,35 @@
 			body{margin: 0;padding: 0;}
 			#dateOuter {
 				/*display: none;*/
-				position: absolute;
-				left: 0px;
-				top: 0px;
-				width: 454px;
-				margin-top:10px;
-				border: 1px solid #F7F7F7;
-				border-radius: 5px;
-				background-color: #F7F7F7;
-				color: #4eccc4;
-				padding-bottom: 20px;
+				width: 27rem;
+				font-size: 1.2rem;
+				background-color: #fff;
+				border: 1px solid #dae1ef;
+				border-radius: .35rem;
 			}
 			.everyWeekDay .weekday,
 			.everyDay .days {
-				/*解决span不支持width属性*/
-				display: -moz-inline-box;
 				display: inline-block;
-				margin: 5px 0 0 20px;
+				width: 1.8rem;
+				height: 1.8rem;
+				margin: .35rem .85rem;
 				text-align: center;
-				line-height: 44.2px;
-				width: 40px;
-				border: 1px solid #F7F7F7;
 				cursor: pointer;
+				border: none !important;
 			}
 			.marginTop{
 				margin-top: 5px;
 			}
 			.selectStyle{
-				padding-left: 10px;
+				padding-left: 1rem;
 				border: none;
 				border-radius: 3px;
 				outline: none;
 				appearance: none;
 				-moz-appearance: none;
 				-webkit-appearance: none;
-				margin: 0 10px 0 10px;
-				width: 60px;
+				margin: 0 1rem 0 1rem;
+				width: 4rem;
 				border-color: #0FB9EF;
 				color: #0FB9EF;
 			}
@@ -61,12 +54,39 @@
 				opacity: 0.8;
 				position: absolute;
 				display: none;
-				width: 100px;
-				height: 100px;
-				top: 35px;
-				left: 30px;
+				width: 180px;
+				max-height: 148px;
+				overflow-y: auto;
+				top: 10px;
+				left: 10px;
 				color: #000;
 				z-index: 999;
+			}
+			.special-list {
+				padding: 5px;
+        border-bottom: 1px dashed;
+			}
+			.special-list .list {
+				display: flex;
+			}
+			.special-list .list h5 {
+				text-align: right;
+				display: inline-block;
+				font-size: 14px;
+				width: 100px;
+				margin: 0;
+				padding: 0;
+			}
+			.special-list .list span {
+				font-size: 12px;
+				max-width: 100px;
+				display: inline-block;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			.special-list:last-of-type {
+				border: 0;
 			}
 			/*当前日期的样式*/
 			.now {
