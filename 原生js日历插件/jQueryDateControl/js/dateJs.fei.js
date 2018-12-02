@@ -14,8 +14,8 @@ let dataLists = [
 	},
 	{
 		nodeName: '下雾',
-		controlStartTime: '10-20',
-		controlEndTime: '11-5'
+		controlStartTime: '11-20',
+		controlEndTime: '11-25'
 	},
 	{
 		nodeName: '下雨',
@@ -25,7 +25,12 @@ let dataLists = [
 	{
 		nodeName: '下冰雹',
 		controlStartTime: '10-01',
-		controlEndTime: '12-15'
+		controlEndTime: '11-15'
+	},
+	{
+		nodeName: '下闪电',
+		controlStartTime: '11-15',
+		controlEndTime: '11-20'
 	},
 ]
 let colorIndex = 0
@@ -103,8 +108,6 @@ function createDate (thisYear, thisMonth) {
 		for (let i = 1; i < getThisMonthDay(thisYear, thisMonth) + 1; i++) {
 				let nodeTitleStart = specialNodeStart(thisYear, thisMonth, i)
 				let nodeTitleStart1 = specialNodeStart1(thisYear, thisMonth, i)
-				let nodeTitleEnt = specialNodeEnt(thisYear, thisMonth, i)
-				let nodeTitleEnt1 = specialNodeEnt1(thisYear, thisMonth, i)
 				if (+thisYear === +nowYear && +thisMonth === +nowMonth && i === +nowDay) {
 						// 今天的显示
 						let nowTitle = nowadays1(nowYear, nowMonth, nowDay)
@@ -116,7 +119,7 @@ function createDate (thisYear, thisMonth) {
 												onmouseover="$specialFocusEventLogic.mouseoverNode(this);" 
 												onmouseout="$specialFocusEventLogic.mouseoutNode(this)" >
 												${i} ${nowTitle}
-				</span>`
+									</span>`
 						} else if (+getThisWeekDay(thisYear, thisMonth, i) === 6 || +getThisWeekDay(thisYear, thisMonth, i) === 0) {
 								// 今天是周末
 								createDoc += '<span onclick="$specialFocusEventLogic.setInput(' + i + ')" class="days now">' + i + '</span>'
@@ -132,15 +135,6 @@ function createDate (thisYear, thisMonth) {
 																onmouseout="$specialFocusEventLogic.mouseoutNode(this)" >
 																${i} ${nodeTitleStart1}
 														</span>`
-				} else if (nodeTitleEnt1) {
-						createDoc += `<span id="weekends" 
-																onClick="$specialFocusEventLogic.setInput('+i+')" 
-																style="background-color: ${nodeTitleEnt[1]}"
-																class="days special"  
-																onmouseover="$specialFocusEventLogic.mouseoverNode(this);" 
-																onmouseout="$specialFocusEventLogic.mouseoutNode(this)" >
-																${i}${nodeTitleEnt1}
-													</span>`
 				} else {
 						// 周末变为红色
 						if (+getThisWeekDay(thisYear, thisMonth, i) === 6 || +getThisWeekDay(thisYear, thisMonth, i) === 0) {
@@ -287,46 +281,25 @@ function specialNodeStart (year, month, day) {
 // 是否是特殊样式节点
 function specialNodeStart1 (year, month, day) {
 		let len = dataLists.length
+		let wrapperBulletBoxDate = ''
 		let bulletBoxDate = []
 		for (let i = 0; i < len; i++) {
-				let str1 = dataLists[i].controlStartTime.split('-')
+			let str1 = dataLists[i].controlStartTime.split('-')
+			let str2 = dataLists[i].controlEndTime.split('-')
 				if (month === +str1[0]) {
 						if (day === +str1[1]) {
 								bulletBoxDate.push(dataLists[i])
 						}
 				}
-		}
-		return getBullteDom(bulletBoxDate, day)
-}
-function specialNodeEnt (year, month, day) {
-		let len = dataLists.length
-		let nodeText = ''
-		let nodeColor = ''
-		for (let i = 0; i < len; i++) {
-				let str2 = dataLists[i].controlEndTime.split('-')
-						if (month === +str2[0]) {
-								if (day === +str2[1]) {
-										nodeText +=  dataLists[i].nodeName + '、'
-										nodeColor = dataLists[i].color
-								}
-						}
-		}
-		let nodeStart = [nodeText, nodeColor]
-		return nodeStart
-}
-function specialNodeEnt1 (year, month, day) {
-		let len = dataLists.length
-		let bulletBoxDate = []
-		for (let i = 0; i < len; i++) {
-				let str2 = dataLists[i].controlEndTime.split('-')
-				if (month === +str2[0]) {
-						if (day === +str2[1]) {
-								bulletBoxDate.push(dataLists[i])
-						}
+			if (month === +str2[0]) {
+				if (day === +str2[1]) {
+					bulletBoxDate.push(dataLists[i])
 				}
+			}
 		}
 		return getBullteDom(bulletBoxDate, day)
 }
+
 function nowadays1 (year, month, day) {
 		let len = dataLists.length
 		let bulletBoxDate = []
@@ -340,6 +313,9 @@ function nowadays1 (year, month, day) {
 								bulletBoxDate.push(dataLists[i])
 						}
 				}
+		}
+		if (bulletBoxDate.length !== 0) {
+			console.log(bulletBoxDate)
 		}
 		return getBullteDom(bulletBoxDate, day)
 }
@@ -358,6 +334,8 @@ function getBullteDom (domDate, i) {
 				 ${domHtml}
 				 </div>`
 		}
+
+
 		return domHtml
 }
 

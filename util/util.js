@@ -34,5 +34,39 @@ module.exports = {
     let data = new Date();
     data.setMonth(data.getMonth() + mounth)
     return this.getCurDate(data)
+  },
+
+	/**
+	 * @desc 封装滚动条
+	 * @param  {undefined}
+	 * @return {String} '
+	 * @time 2018-12-01
+	 */
+	getScrollOffset () {
+    if(window.pageXOffset) {
+      return {
+        x: window.pageXOffset,
+        y: window.pageYOffset
+      }
+    } else {
+      return {
+        x: document.body.scrollLeft + document.documentElement.scrollLeft,
+        y: document.body.scrollTop + document.documentElement.scrollTop
+      }
+    }
+  },
+
+	/**
+	 * @desc  标签属性值
+	 * @param  {dom， 属性}
+	 * @return {String} '
+	 * @time 2018-12-02
+	 */
+	getStyle(elem, prop) {
+	  if (window.getComputedStyle) {
+	    return window.getComputedStyle(elem, null)['prop']
+    } else {
+	    return elem.currentStyle['prop']
+    }
   }
 }
