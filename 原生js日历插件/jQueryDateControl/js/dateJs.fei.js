@@ -32,7 +32,30 @@ let dataLists = [
 		controlStartTime: '11-15',
 		controlEndTime: '11-20'
 	},
+	{
+		nodeName: '下糖果',
+		controlStartTime: '11-15',
+		controlEndTime: '11-28'
+	}
 ]
+dataLists.sort(function sortArray(last, next) {
+	let lastStartTime = new Date(2018, +last.controlStartTime.split('-')[0], +last.controlStartTime.split('-')[1]).getTime()
+	let lastEndTime = new Date(2018, +last.controlEndTime.split('-')[0], +last.controlEndTime.split('-')[1]).getTime()
+	let nextStartTime = new Date(2018, +next.controlStartTime.split('-')[0], +next.controlStartTime.split('-')[1]).getTime()
+	let nextEndTime = new Date(2018, +next.controlEndTime.split('-')[0], +next.controlEndTime.split('-')[1]).getTime()
+	if(lastStartTime > nextStartTime) {
+		return -1
+	} else if (lastStartTime === nextStartTime) {
+		if (lastEndTime > nextEndTime) {
+			return 1
+		} else {
+			return -1
+		}
+	} else {
+		return 1
+	}
+})
+console.log(dataLists)
 let colorIndex = 0
 
 let colorNode = ['green', 'red', 'gray', 'orange', 'blue', 'purple']
@@ -106,19 +129,16 @@ function createDate (thisYear, thisMonth) {
 		// 循环输出当月天数
 		// getThisMonthDay()获取当月天数
 		for (let i = 1; i < getThisMonthDay(thisYear, thisMonth) + 1; i++) {
-				let nodeTitleStart = specialNodeStart(thisYear, thisMonth, i)
+				let color = nodeColor(thisYear, thisMonth, i)
 				let nodeTitleStart1 = specialNodeStart1(thisYear, thisMonth, i)
 				if (+thisYear === +nowYear && +thisMonth === +nowMonth && i === +nowDay) {
 						// 今天的显示
-						let nowTitle = nowadays1(nowYear, nowMonth, nowDay)
 						if (nowadays) {
 								createDoc += `
 									<span id="weekends" 
 												onClick="$specialFocusEventLogic.setInput('+i+')" 
-												class="days special now" 
-												onmouseover="$specialFocusEventLogic.mouseoverNode(this);" 
-												onmouseout="$specialFocusEventLogic.mouseoutNode(this)" >
-												${i} ${nowTitle}
+												class="days special now">
+												${i}
 									</span>`
 						} else if (+getThisWeekDay(thisYear, thisMonth, i) === 6 || +getThisWeekDay(thisYear, thisMonth, i) === 0) {
 								// 今天是周末
@@ -129,7 +149,7 @@ function createDate (thisYear, thisMonth) {
 				} else if (nodeTitleStart1) {
 						createDoc += `<span id="weekends" 
 																onClick="$specialFocusEventLogic.setInput('+i+')"  
-																style="background-color: ${nodeTitleStart[1]}"  
+																style="background-color: ${color}"  
 																class="days special"  
 																onmouseover="$specialFocusEventLogic.mouseoverNode(this);" 
 																onmouseout="$specialFocusEventLogic.mouseoutNode(this)" >
@@ -262,60 +282,37 @@ $window.$specialFocusEventLogic = {
 }
 
 // 是否是特殊样式节点
-function specialNodeStart (year, month, day) {
-		let len = dataLists.length
-		let nodeText = ''
-		let nodeColor = ''
-		for (let i = 0; i < len; i++) {
-				let str1 = dataLists[i].controlStartTime.split('-')
-				if (month === +str1[0]) {
-						if (day === +str1[1]) {
-								nodeText +=  dataLists[i].nodeName + '、'
-								nodeColor = dataLists[i].color
-						}
-				}
+function nodeColor(year, month, day) {
+	let len = dataLists.length
+	let color = ''
+	for (let i = 0; i < len; i++) {
+		let str1 = dataLists[i].controlStartTime.split('-')
+		let str2 = dataLists[i].controlEndTime.split('-')
+		// console.log(str1[0], str1[1])
+		let lastDate = new Date(year, str1[0], str1[1])
+		let nextDate = new Date(year, str2[0], str2[1])
+		let newDate = new Date(year, month, day)
+		// console.log(lastDate.getTime(), newDate.getTime(), nextDate.getTime())
+		if (lastDate <= newDate && nextDate >= newDate) {
+			color = dataLists[i].color
+			return color
 		}
-		let nodeStart = [nodeText, nodeColor]
-		return nodeStart
+	}
 }
+
 // 是否是特殊样式节点
 function specialNodeStart1 (year, month, day) {
 		let len = dataLists.length
-		let wrapperBulletBoxDate = ''
 		let bulletBoxDate = []
 		for (let i = 0; i < len; i++) {
 			let str1 = dataLists[i].controlStartTime.split('-')
 			let str2 = dataLists[i].controlEndTime.split('-')
-				if (month === +str1[0]) {
-						if (day === +str1[1]) {
-								bulletBoxDate.push(dataLists[i])
-						}
-				}
-			if (month === +str2[0]) {
-				if (day === +str2[1]) {
-					bulletBoxDate.push(dataLists[i])
-				}
+			let lastDate = new Date(year, str1[0], str1[1])
+			let nextDate = new Date(year, str2[0], str2[1])
+			let newDate = new Date(year, month, day)
+			if (lastDate <= newDate && nextDate >= newDate) {
+				bulletBoxDate.push(dataLists[i])
 			}
-		}
-		return getBullteDom(bulletBoxDate, day)
-}
-
-function nowadays1 (year, month, day) {
-		let len = dataLists.length
-		let bulletBoxDate = []
-		for (let i = 0; i < len; i++) {
-				let data1 = dataLists[i].controlStartTime.split('-')
-				let data2 = dataLists[i].controlEndTime.split('-')
-				if (+data1[0] < month && +data2[0] > month) {
-						bulletBoxDate.push(dataLists[i])
-				} else if (+data1[0] === month) {
-						if (+data1[1] <= day && +data2[1] >= day) {
-								bulletBoxDate.push(dataLists[i])
-						}
-				}
-		}
-		if (bulletBoxDate.length !== 0) {
-			console.log(bulletBoxDate)
 		}
 		return getBullteDom(bulletBoxDate, day)
 }

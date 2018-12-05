@@ -1,3 +1,3 @@
 let utils = require('./util.js')
-let carNoFlgg = utils.regular('cardNo', '32120119950')
+let carNoFlgg = utils.regular('name', '')
 console.log(carNoFlgg)
