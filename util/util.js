@@ -6,7 +6,7 @@
 module.exports = {
 /**
  * @desc   任意时间Date置换成字符串
- * @param  {new Date}  
+ * @param  {new Date}
  * @return {String}
  * @time 2018-11-28
  */
@@ -26,7 +26,7 @@ module.exports = {
 
   /**
    * @desc 联动getCurdate函数，获取几月之后的时间
-   * @param {Number} mounth 
+   * @param {Number} mounth
    * @return {String} '
    * @time 2018-11-28
    */
@@ -69,11 +69,12 @@ module.exports = {
 	    return elem.currentStyle['prop']
     }
   },
+
 	/**
 	 * @desc  正则匹配
 	 * @param  {类型， 数据}
 	 * @return {Boolean} '
-	 * @time 2018-12-03
+	 * @time 2018-12-03，2018-12-05
 	 * @type: cardNo(身份证）、phone（手机号）、tel（固定电话）、email（邮箱）、QQ（QQ）
 	 *        carNum（车牌号）、chinese（汉字）、name（姓名）
 	 */
@@ -135,5 +136,51 @@ module.exports = {
 				let reg = /(^[\u4E00-\u9FA5]{2,4}$)|(^[\u4E00-\u9FA5]+(·[\u4E00-\u9FA5]+)*$)|(^[\u4E00-\u9FA5A-Za-z\s]+(·[\u4E00-\u9FA5A-Za-z]+)*$)/
 				return check(reg, data)
 			}
-	}
+	},
+
+	/**
+	 * @desc  节流（处理按钮疯狂点击）
+	 * @param  {点击函数， 延迟时间}
+	 * @time 2018-12-06
+	 */
+		throttle (handler, wait=1000) {
+			let lastTime = 0;
+			return function (e) {
+				let nowTime = new Date().getTime()  // 1970年一月一日
+				if (nowTime - lastTime > wait) {
+					handler.apply(this, arguments)
+					lastTime = nowTime
+				}
+			}
+		},
+	/**
+	 * @desc  物体拖拽方法
+	 * @param  {目标div， 取消的父级}
+	 * @time 2018-12-07
+	 */
+		bindEvent (ele, wrap) {
+			let X, Y, boxL, boxT, disL, disT;
+			let drag = false;
+			ele.onmousedown = function (e) {
+				drag = true;
+				let event = e || window.event;
+				X = event.clientX;
+				Y = event.clientY;
+				boxL = ele.offsetLeft;
+				boxT = ele.offsetTop;
+				disL = X - boxL;
+				disT = Y - boxT;
+				console.log(disL, disT)
+			}
+			wrap.onmousemove = function (e){
+				let event = e || window.event;
+				if (drag) {
+					ele.style.left = event.clientX - disL + 'px';
+					ele.style.top = event.clientY - disT + 'px';
+				}
+			}
+			ele.onmouseup = function () {
+				drag = false;
+			}
+		}
 }
