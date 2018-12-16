@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="robot.css">
+</head>
+<body>
+    <div id="chat">
+        <div class="head">聊天小凯</div>
+        <div class="content"></div>
+        <div class="input">
+            <input type="text" id="chatArea" onkeydown="send(event)">
+            <div id="sendBtn" onclick="send(event)">发送</div>
+        </div>
+    </div>
+    <script>
+	    function appendChat(text, type) {
+	    	console.log(text)
+          let chat = document.createElement('div')
+          let content = document.createElement('span')
+          let img = document.createElement('img')
+          content.innerHTML = text;
+          if (type == 1) {
+            img.src = './panda.jpeg'
+            img.style.float = 'right'
+            img.style.width = '4.5rem'
+            img.style.height = '4.5rem'
+            img.style.marginRight = '5px'
+            content.classList.add("myChat")
+          } else {
+            img.src = "./ck.jpg";
+            img.style.float = "left";
+            img.style.width = "4.5rem";
+            img.style.height = "4.5rem";
+            img.style.marginLeft = "5px";
+            content.classList.add("robotChat");
+          }
+          chat.appendChild(img)
+          chat.style.overflow = 'hidden'
+          chat.style.marginTop = '15px'
+          chat.appendChild(content)
+          document.getElementsByClassName("content")[0].appendChild(chat);
+	    }
+	    function send(event) {
+          if (event instanceof KeyboardEvent && event.key != 'Enter') {
+            return
+          }
+          let val = document.getElementById('chatArea').value;
+          if (val == null || val == '') {
+            return
+          }
+          appendChat(val, 1)
+          let ajax = new XMLHttpRequest()
+          ajax.open('GET', "/api/chat?text=" + val)
+          console.log(3233)
+          ajax.send();
+          ajax.onreadystatechange = function () {
+				    if (ajax.readyState==4 &&ajax.status==200) {
+					    appendChat(JSON.parse(ajax.responseText).text, 2);
+					    document.getElementById("chatArea").value = "";
+				    }
+
+			    }
+        }
+    </script>
+</body>
+</html>
