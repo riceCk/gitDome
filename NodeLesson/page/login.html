@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<script src="login.js"></script>-->
+</head>
+<body>
+    <h1>hello world</h1>
+    <!--<input type="text" id="stuNum" placeholder="学号">-->
+    <!--<input type="password" id="password" placeholder="密码">-->
+    <!--<input type="submit" value="提交" onclick="login()">-->
+    <form action="/login" method="post">
+        <input type="text" id="stuNum" name="stuNum" placeholder="学号">
+        <input type="password" id="password" name="stuNum" placeholder="密码">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        function login() {
+        	let stuNum = document.getElementById('stuNum').value;
+        	let password = document.getElementById('password').value;
+        	let params = 'stuNum=' + stuNum + '&' + 'password=' + password;
+	        let xmlHttp=new XMLHttpRequest()
+	        xmlHttp.open("POST", '/login', true)
+	        xmlHttp.send(params)
+	        xmlHttp.onreadystatechange = function() {
+		        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+			        if(xmlHttp.responseText === 'ok') {
+			        	alert('成功')
+                        location.href = '/main.html'
+                    } else {
+			        	alert('失败')
+                    }
+		        }
+	        }
+        }
+    </script>
+</body>
+</html>
