@@ -51,17 +51,22 @@
             return
           }
           appendChat(val, 1)
-          let ajax = new XMLHttpRequest()
-          ajax.open('GET', "/api/chat?text=" + val)
-          console.log(3233)
-          ajax.send();
-          ajax.onreadystatechange = function () {
-				    if (ajax.readyState==4 &&ajax.status==200) {
-					    appendChat(JSON.parse(ajax.responseText).text, 2);
-					    document.getElementById("chatArea").value = "";
-				    }
+          try {
+	          let ajax = new XMLHttpRequest()
+	          ajax.open('get', "http://127.0.0.1:3000/api/chat?text=" + val)
+	          ajax.send();
+	          ajax.onreadystatechange = function () {
+		          if (ajax.readyState==4 &&ajax.status==200) {
+			          appendChat(JSON.parse(ajax.responseText).text, 2);
+			          document.getElementById("chatArea").value = "";
+		          }
+	          }
+          } catch (e) {
+          	console.log(e)
+	          appendChat("我不知道你说的什么", 2);
+	          document.getElementById("chatArea").value = "";
+          }
 
-			    }
         }
     </script>
 </body>

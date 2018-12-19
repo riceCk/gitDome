@@ -16,7 +16,12 @@ function chat(request, response, data) {
 	}, function(err, resp, body) {
 		if(!err && resp.statusCode == 200) {
 			let obj = JSON.parse(body)
-			response.writeHead(200)
+			let head = {
+				"Access-Control-Allow-Origin": "*",
+				"Access-Control-Allow-Methods": "GET",
+				"Access-Control-Allow-Headers": "x-request-with , content-type",
+			}
+			response.writeHead(200, head)
 			if (obj && obj.results && obj.results.length > 0 && obj.results[0].values) {
 				response.write(JSON.stringify(obj.results[0].values))
 				response.end()
