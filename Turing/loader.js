@@ -14,7 +14,7 @@ for (let i = 0; i < files.length; i++) {
 			if (pathMap.get(key) == null) {
 				pathMap.set(key, value)
 			} else {
-				throw  new Error('url path异常重复，url:' + key)
+				throw  new Error('url path，url:' + key)
 			}
 			controllerSet.push(temp)
 		}
