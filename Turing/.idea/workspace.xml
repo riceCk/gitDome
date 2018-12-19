@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7056f965-1e5e-4000-8312-933555683f5a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/robot.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/robot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.conf" beforeDir="false" afterPath="$PROJECT_DIR$/server.conf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,86 +21,75 @@
     <session id="575103746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="307" value="1" />
-          <entry key="conf" value="4" />
-          <entry key="css" value="4" />
-          <entry key="html" value="10" />
+          <entry key="conf" value="6" />
+          <entry key="css" value="5" />
+          <entry key="html" value="12" />
           <entry key="jpeg" value="1" />
-          <entry key="js" value="12" />
-          <entry key="json" value="1" />
+          <entry key="js" value="14" />
+          <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="4" />
-          <entry key="HTML" value="10" />
+          <entry key="CSS" value="5" />
+          <entry key="HTML" value="12" />
           <entry key="Image" value="1" />
-          <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="13" />
-          <entry key="tsconfig" value="4" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="15" />
+          <entry key="tsconfig" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="conf" value="46" />
+          <entry key="conf" value="60" />
           <entry key="css" value="1076" />
-          <entry key="html" value="1404" />
-          <entry key="js" value="3227" />
-          <entry key="txt" value="12" />
+          <entry key="html" value="1405" />
+          <entry key="js" value="3317" />
+          <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1076" />
-          <entry key="HTML" value="1406" />
-          <entry key="JavaScript" value="3225" />
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="tsconfig" value="46" />
+          <entry key="HTML" value="1407" />
+          <entry key="JavaScript" value="3315" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="tsconfig" value="60" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="27" />
-              <folding>
-                <element signature="e#738#952#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="28" column="45" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/robot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="224">
+              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#723#976#0" />
+                <element signature="e#982#1238#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/robot.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -125,13 +117,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/page/robot.css" />
-        <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/server.conf" />
-        <option value="$PROJECT_DIR$/loader.js" />
         <option value="$PROJECT_DIR$/web/api.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/web/chat.js" />
         <option value="$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/page/robot.html" />
+        <option value="$PROJECT_DIR$/loader.js" />
+        <option value="$PROJECT_DIR$/server.conf" />
+        <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/page/robot.html" />
       </list>
     </option>
@@ -151,9 +143,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-173" />
-    <option name="y" value="15" />
-    <option name="width" value="1655" />
+    <option name="x" value="380" />
+    <option name="y" value="32" />
+    <option name="width" value="1490" />
     <option name="height" value="1025" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -175,11 +167,6 @@
               <item name="Turing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Turing" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Turing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Turing" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,7 +208,7 @@
     <configuration name="robot.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Turing/page/robot.html">
       <method v="2" />
     </configuration>
-    <configuration name="chat.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="chat.js" working-dir="$PROJECT_DIR$/web">
+    <configuration name="config.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="config.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
@@ -233,17 +220,17 @@
     <list>
       <item itemvalue="Node.js.index.js" />
       <item itemvalue="Node.js.loader.js" />
-      <item itemvalue="Node.js.chat.js" />
       <item itemvalue="JavaScript Debug.robot.html" />
       <item itemvalue="JavaScript Debug.robot.html (1)" />
+      <item itemvalue="Node.js.config.js" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Node.js.loader.js" />
+        <item itemvalue="Node.js.config.js" />
         <item itemvalue="JavaScript Debug.robot.html (1)" />
         <item itemvalue="JavaScript Debug.robot.html" />
-        <item itemvalue="Node.js.loader.js" />
-        <item itemvalue="Node.js.chat.js" />
       </list>
     </recent_temporary>
   </component>
@@ -262,6 +249,8 @@
       <workItem from="1545046792245" duration="2313000" />
       <workItem from="1545051900580" duration="1030000" />
       <workItem from="1545102053988" duration="69000" />
+      <workItem from="1545210716084" duration="2678000" />
+      <workItem from="1545215005494" duration="2480000" />
     </task>
     <task id="LOCAL-00001" summary="聊天机器人">
       <created>1544967829546</created>
@@ -270,22 +259,36 @@
       <option name="project" value="LOCAL" />
       <updated>1544967829546</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改">
+      <created>1545210785670</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545210785670</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改">
+      <created>1545216995174</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545216995174</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22677000" />
+    <option name="totallyTimeSpent" value="27835000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="465" y="22" width="1192" height="820" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15059446" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19723183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32892805" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25106382" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22978723" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31205675" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -307,7 +310,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="聊天机器人" />
-    <option name="LAST_COMMIT_MESSAGE" value="聊天机器人" />
+    <MESSAGE value="修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -338,22 +342,9 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/page/robot.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="70" selection-start-line="70" selection-end-line="122" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/page/robot.css" />
     <entry file="file://$PROJECT_DIR$/page/xiaodu.jpeg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/robot.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="995">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.11.3/core-modules/module.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -369,54 +360,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="8" selection-start-line="4" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="83" column="15" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/page/robot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="27" />
-          <folding>
-            <element signature="e#738#952#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/index.js" />
+    <entry file="file://$PROJECT_DIR$/../../../web前端技术学习/前端学习/2.进阶/聊天机器人/Turing/page/robot.html" />
     <entry file="file://$PROJECT_DIR$/web/chat.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
@@ -424,12 +369,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="51" column="7" lean-forward="true" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="e#738#952#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/robot.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/page/robot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+        <state relative-caret-position="224">
+          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#723#976#0" />
+            <element signature="e#982#1238#0" />
           </folding>
         </state>
       </provider>
