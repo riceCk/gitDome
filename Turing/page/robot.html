@@ -17,7 +17,6 @@
     </div>
     <script>
 	    function appendChat(text, type) {
-          getClientHeight()
           let chat = document.createElement('div')
           let content = document.createElement('span')
           let img = document.createElement('img')
@@ -69,28 +68,6 @@
 	          document.getElementById("chatArea").value = "";
           }
         }
-        function getClientHeight() {
-            let clientHeight=0;
-            if(document.body.clientHeight&&document.documentElement.clientHeight) {
-                clientHeight = (document.body.clientHeight<document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
-            } else {
-                clientHeight = (document.body.clientHeight>document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
-            }
-            let chat = document.getElementById('chat')
-            chat.style.height = clientHeight + 'px'
-        }
-        function getScrollTop() {
-            let scrollTop=0;
-            if(document.documentElement&&document.documentElement.scrollTop) {
-                scrollTop=document.documentElement.scrollTop;
-            } else if(document.body) {
-                scrollTop=document.body.scrollTop;
-            }
-            console.log(scrollTop)
-            return scrollTop;
-        }
-        getScrollTop()
-        getClientHeight()
     </script>
 </body>
 </html>
