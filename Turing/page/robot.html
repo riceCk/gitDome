@@ -17,7 +17,7 @@
     </div>
     <script>
 	    function appendChat(text, type) {
-	    	console.log(text)
+          getClientHeight()
           let chat = document.createElement('div')
           let content = document.createElement('span')
           let img = document.createElement('img')
@@ -25,15 +25,15 @@
           if (type == 1) {
             img.src = './panda.jpeg'
             img.style.float = 'right'
-            img.style.width = '4.5rem'
-            img.style.height = '4.5rem'
+            img.style.width = '40px'
+            img.style.height = '40px'
             img.style.marginRight = '5px'
             content.classList.add("myChat")
           } else {
             img.src = "./ck.jpg";
             img.style.float = "left";
-            img.style.width = "4.5rem";
-            img.style.height = "4.5rem";
+            img.style.width = "40px";
+            img.style.height = "40px";
             img.style.marginLeft = "5px";
             content.classList.add("robotChat");
           }
@@ -42,6 +42,7 @@
           chat.style.marginTop = '15px'
           chat.appendChild(content)
           document.getElementsByClassName("content")[0].appendChild(chat);
+          document.getElementsByClassName("content")[0].scrollTop = document.getElementsByClassName("content")[0].scrollHeight
 	    }
 	    function send(event) {
           if (event instanceof KeyboardEvent && event.key != 'Enter') {
@@ -67,8 +68,29 @@
 	          appendChat("我不知道你说的什么", 2);
 	          document.getElementById("chatArea").value = "";
           }
-
         }
+        function getClientHeight() {
+            let clientHeight=0;
+            if(document.body.clientHeight&&document.documentElement.clientHeight) {
+                clientHeight = (document.body.clientHeight<document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
+            } else {
+                clientHeight = (document.body.clientHeight>document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
+            }
+            let chat = document.getElementById('chat')
+            chat.style.height = clientHeight + 'px'
+        }
+        function getScrollTop() {
+            let scrollTop=0;
+            if(document.documentElement&&document.documentElement.scrollTop) {
+                scrollTop=document.documentElement.scrollTop;
+            } else if(document.body) {
+                scrollTop=document.body.scrollTop;
+            }
+            console.log(scrollTop)
+            return scrollTop;
+        }
+        getScrollTop()
+        getClientHeight()
     </script>
 </body>
 </html>
