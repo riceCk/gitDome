@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7056f965-1e5e-4000-8312-933555683f5a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/robot.css" beforeDir="false" afterPath="$PROJECT_DIR$/page/robot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/robot.html" beforeDir="false" afterPath="$PROJECT_DIR$/page/robot.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +17,7 @@
     <session id="575103746">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="4" />
@@ -53,17 +50,17 @@
         <counts>
           <entry key="conf" value="60" />
           <entry key="css" value="1140" />
-          <entry key="html" value="1598" />
+          <entry key="html" value="1599" />
           <entry key="js" value="3319" />
-          <entry key="txt" value="31" />
+          <entry key="txt" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1140" />
-          <entry key="HTML" value="1600" />
+          <entry key="HTML" value="1601" />
           <entry key="JavaScript" value="3317" />
-          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="PLAIN_TEXT" value="33" />
           <entry key="tsconfig" value="60" />
         </counts>
       </usages-collector>
@@ -74,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/page/robot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="344">
+              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
               <folding>
                 <element signature="e#723#976#0" />
                 <element signature="e#982#1238#0" />
@@ -119,6 +116,7 @@
     <findStrings>
       <find>request</find>
       <find>appendChat</find>
+      <find>getClientHeight</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,7 +151,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-72" />
     <option name="y" value="33" />
     <option name="width" value="1419" />
@@ -261,7 +259,7 @@
       <workItem from="1545051900580" duration="1030000" />
       <workItem from="1545102053988" duration="69000" />
       <workItem from="1545210716084" duration="2678000" />
-      <workItem from="1545215005494" duration="5936000" />
+      <workItem from="1545215005494" duration="6536000" />
     </task>
     <task id="LOCAL-00001" summary="聊天机器人">
       <created>1544967829546</created>
@@ -298,14 +296,28 @@
       <option name="project" value="LOCAL" />
       <updated>1545221103176</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="手机自适应处理处理1">
+      <created>1545222342602</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545222342602</updated>
+    </task>
+    <task id="LOCAL-00007" summary="手机自适应处理处理2">
+      <created>1545222546985</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545222546985</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31291000" />
+    <option name="totallyTimeSpent" value="31891000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-57" y="27" width="1135" height="822" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.19723183" />
@@ -357,7 +369,9 @@
     <MESSAGE value="修改" />
     <MESSAGE value="手机bug处理" />
     <MESSAGE value="手机自适应处理处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="手机自适应处理处理" />
+    <MESSAGE value="手机自适应处理处理1" />
+    <MESSAGE value="手机自适应处理处理2" />
+    <option name="LAST_COMMIT_MESSAGE" value="手机自适应处理处理2" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -465,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/robot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="344">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
           <folding>
             <element signature="e#723#976#0" />
             <element signature="e#982#1238#0" />
