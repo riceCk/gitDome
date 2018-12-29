@@ -182,5 +182,48 @@ module.exports = {
 			ele.onmouseup = function () {
 				drag = false;
 			}
+		},
+
+	/**
+	 * @desc  优化动画
+	 * @param
+	 * @time 2018-12-26
+	 */
+		requestAnimationFrame() {
+			return window.requestAnimationFrame ||
+			window.webkitRequestAnimationFrame ||
+			window.mozRequestAnimationFrame ||
+			window.setTimeout(callbake, 1000/60)
+		},
+	/**
+	 * @desc  ie兼容事件绑定或消除延迟加载
+	 * @description 第一次调用总会消耗性能，随后调用会更快
+	 * @param （目标， 事件源， 函数）
+	 * @time 2018-12-28
+	 */
+		addHandler (target, eventType, handler) {
+			if (target.addEventListener) {
+				this.addHandler = (target, eventType, handler) => {
+					target.addEventListener(eventType, handler, false)
+				}
+			} else {
+				this.addHandler =  (target, eventType, handler) => {
+					target.attachEvent('on' + eventType, handler)
+				}
+			}
+			this.addHandler(target, eventType, handler)
+		},
+		removeHandler (target, eventType, handler) {
+			if (target.removeEventlistener) {
+				this.removeHandler =  (target, eventType, handler) => {
+					target.removeEventlistener (eventType, handler, false)
+				}
+			} else {
+				this.removeHandler = (target, eventType, handler) => {
+					target.detachEvent('on' + eventType, handler)
+				}
+			}
+			this.removeHandler(target, eventType, handler)
 		}
+
 }
