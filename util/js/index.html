@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="btn" style="width: 100px; height: 100px; position: relative; left: 0; background-color: red;"></div>
+    <script src="util.js"></script>
+    <script>
+        let req;
+        function move() {
+        	let btn = document.getElementById('btn');
+        	btn.style.left = btn.offsetLeft + 10 + 'px';
+        	if (btn.offsetLeft >= 300) {
+                cancelAnimationFrame(req);
+        		btn.style.left = '300px'
+            } else {
+        		req = requestAnimationFrame(move);
+            }
+        }
+        move();
+    </script>
+</body>
+</html>

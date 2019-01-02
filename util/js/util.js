@@ -158,7 +158,7 @@ module.exports = {
 	 * @param  {目标div， 取消的父级}
 	 * @time 2018-12-07
 	 */
-		bindEvent (ele, wrap) {
+		dragEvent (ele, wrap) {
 			let X, Y, boxL, boxT, disL, disT;
 			let drag = false;
 			ele.onmousedown = function (e) {
@@ -186,19 +186,33 @@ module.exports = {
 
 	/**
 	 * @desc  优化动画
-	 * @param
+	 * requestAnimFrame: 开启定时器
+	 * cancelAnimFrame: 关闭定时器
 	 * @time 2018-12-26
 	 */
-		requestAnimationFrame() {
+		requestAnimFrame (){
 			return window.requestAnimationFrame ||
-			window.webkitRequestAnimationFrame ||
-			window.mozRequestAnimationFrame ||
-			window.setTimeout(callbake, 1000/60)
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function( callback ){
+					window.setTimeout(callback, 1000 / 60);
+				};
 		},
+		cancelAnimFrame (){
+			return window.cancelAnimationFrame ||
+				window.webkitCancelAnimationFrame ||
+				window.mozCancelAnimationFrame ||
+				function( id){
+					window.clearTimeout(id);
+				};
+		},
+
 	/**
 	 * @desc  ie兼容事件绑定或消除延迟加载
 	 * @description 第一次调用总会消耗性能，随后调用会更快
 	 * @param （目标， 事件源， 函数）
+	 * addHandler: 绑定事件
+	 * removeHandler： 解绑事件
 	 * @time 2018-12-28
 	 */
 		addHandler (target, eventType, handler) {
