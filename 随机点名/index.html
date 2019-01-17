@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .wrapper {
+      width: 800px;
+      margin: 100px auto;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .box li {
+      vertical-align: top;
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      text-align: center;
+      line-height: 50px;
+      margin: 5px;
+    }
+
+    .box li.change {
+      background-color: red;
+      color: #fff;
+      font-weight: bolder;
+    }
+
+    .wrapper button {
+      display: inline-block;
+    }
+
+    .wrapper button {
+      border: none;
+      width: 100px;
+      height: 50px;
+      border-radius: 10px;
+      cursor: pointer;
+      outline: none;
+      margin-top: 20px;
+      font-weight: bolder;
+      color: #333;
+      background-color: #eee;
+    }
+
+    .wrapper .choose {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+
+    .wrapper .choose img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <ul class="box"></ul>
+    <button class="start">开始点名</button>
+    <button class="stop">停止</button>
+    <div class="choose">
+      <span>幸运的你</span>
+      <img src="./1.gif" alt="">
+      <span class="name"></span>
+    </div>
+  </div>
+  <script>
+    let boxUl = document.getElementsByClassName('box')[0];
+    let start = document.getElementsByClassName('start')[0];
+    let stop = document.getElementsByClassName('stop')[0];
+    let oLi = document.getElementsByTagName('li');
+    let arr = ["郭强", "诸泽涵", "张利宏", "高海波", "张东升", "高英伟", "秦超蒙", "麦腾阳", "吴金正", "马方岩", "尚义鹏", "赵建龙", "李旭斌", "张丰", "金豪", "王银鹏", "温壮", "田利明", "邱国军", "姚志强", "黎怡志", "张崇如", "高帅帅", "谷世龙", "陈娜", "?常勇", "杨明豪", "段春林", "丛绍谨", "曾佑坤", "洪洋", "王永琪", "王阳", "陈宇"]
+    let str = '';
+    for (let i = 0; i < arr.length; i++) {
+      str += `<li>${arr[i]}</li>`;
+    }
+    boxUl.innerHTML = str;
+    let timer = null;
+    start.onclick = function () {
+      clearInterval(timer);
+      timer = setInterval(() => {
+        let i = Math.floor(Math.random() * arr.length)
+        for (let i = 0; i < oLi.length; i++) {
+          oLi[i].className = ''
+        }
+        oLi[i].className = 'change';
+      }, 50);
+    }
+
+    stop.onclick = () => {
+      clearInterval(timer);
+      let choise = document.getElementsByClassName('change')[0];
+      let name = choise.innerText;
+      let nameSpan = document.getElementsByClassName('name')[0];
+      nameSpan.innerText = name;
+    }
+  </script>
+</body>
+
+</html>
