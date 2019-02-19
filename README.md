@@ -1,4 +1,5 @@
 # :book: 对util.js中方法的说明
+```bash
 | - getCurDate 任意时间Date置换成字符串
 | - add_mounth 获取几月之后的时间
 | - getScrollOffset 封装滚动条
@@ -14,7 +15,7 @@
 | - inherit 原型继承
 | - extendDeep 深度克隆
 | - memorize 缓存机制，函数记忆
-
+```
 ## 优化动画
 ```bash
 <div id="btn" 
