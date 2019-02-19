@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="inputBox">
+    <input type="text" class="inputCaptcha" placeholder="请输入验证码">
+    <span class="captchaIcon"></span>
+  </div>
+  <p class="errorText"></p>
+  <div class="canvasBox">
+    <div class="imageBox">
+      <canvas id="canvasCaptcha" width=300 height=80></canvas>
+    </div>
+    <input type="button" class="refresh">
+  </div>
+  <button type="" class="submit">submit</button>
+</div>
+<script src="./jquery.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>

@@ -54,7 +54,7 @@
           appendChat(val, 1)
           try {
 	          let ajax = new XMLHttpRequest()
-	          ajax.open('get', "http://39.108.107.212:3000/api/chat?text=" + val)
+	          ajax.open('get', "http://127.0.0.1:3000/api/chat?text=" + val)
 	          ajax.send();
 	          ajax.onreadystatechange = function () {
 		          if (ajax.readyState==4 &&ajax.status==200) {
