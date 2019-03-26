@@ -15,6 +15,7 @@
 | - inherit 原型继承
 | - extendDeep 深度克隆
 | - memorize 缓存机制，函数记忆
+| - getSingle 函数构造单例模式
 ```
 ## 优化动画
 ```bash
